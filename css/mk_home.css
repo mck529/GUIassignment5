@@ -1,0 +1,111 @@
+/*
+    File: /~mkusmire/public_html/css/mk_home.css
+    GUI Programming I Assignment: Styling Your First Web Page With CSS
+    Michael Kusmirek, Computer Science Student, mkusmire@cs.uml.edu
+    Copyright (c) 2018 Michael Kusmirek
+    Updated October 10th 2018
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Style for body, including background gradient effect */
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #c9d6ff, #e2e2e2);
+}
+
+/* box for main area of webpage */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #3a7bd5;
+}
+
+/* styling text inside of header */
+.header h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 2px black;
+}
+
+/* top navigation bar with links to assignments/resume */
+.topnav {
+    overflow: hidden;
+    background-color: #3a7bd5;
+}
+
+/* styles for links in navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 60%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 40%;
+    padding-left: 20px;
+}
+
+
+/* Box for area of information/image */
+.box {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #3a7bd5;
+    margin-top: 20px;
+}
+
+/* Style for text inside of footer */
+.footer h4 {
+    color: white;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
